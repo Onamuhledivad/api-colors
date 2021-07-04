@@ -2,6 +2,15 @@
 
 API desarrollada apartir de la problematica dada por Multiplica Talent, para postular como desarrollador full stack.
 
+Tecnologias utilizadas
+Express Node JS 
+express-validator
+MongoDB Atlas DB
+Mongoose
+Heroku
+Git
+
+
 
 
 Instrucciones para instalar:

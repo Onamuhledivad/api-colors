@@ -37,13 +37,13 @@ const login = async(req, res = response) => {
     } catch (error) {
         console.log(error);
         return res.status(500).json({
-            msg: 'Error en la app'
+            msg: 'Error en la autenticacion'
         });
     }
 
 
 
-}
+};
 
 
 const newUser = async(req, res = response) => {
@@ -63,7 +63,7 @@ const newUser = async(req, res = response) => {
     res.json({
         newUser
     });
-}
+};
 
 const getUser = async(req, res = response) => {
 
@@ -84,10 +84,10 @@ const getUser = async(req, res = response) => {
         total,
         users
     });
-}
+};
 
 module.exports = {
     login,
     newUser,
     getUser
-}
+};

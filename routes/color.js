@@ -60,4 +60,5 @@ router.delete('/:id', [
     validFields
 ], deleteColor);
 
+
 module.exports = router;

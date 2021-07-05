@@ -65,9 +65,29 @@ const newUser = async(req, res = response) => {
     });
 }
 
+const getUser = async(req, res = response) => {
 
+    const { limit = 6, since = 0 } = req.query;
+
+
+    const [total, users] = await Promise.all([
+        //obtener el total de registro
+        User.countDocuments(),
+        //Obtener registros
+        User.find()
+        //convertir string to number para paginacion y limite
+        .skip(Number(since))
+        .limit(Number(limit))
+    ]);
+
+    res.json({
+        total,
+        users
+    });
+}
 
 module.exports = {
     login,
-    newUser
+    newUser,
+    getUser
 }

@@ -3,7 +3,7 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 const { validFields } = require('../middlewares/valid-fields');
 //Import Controller
-const { login, newUser } = require('../controllers/auth');
+const { login, newUser, getUser } = require('../controllers/auth');
 
 const router = Router();
 
@@ -14,5 +14,8 @@ router.post('/login', [
 ], login);
 
 router.post('/new', newUser);
+
+//test
+router.get('/', getUser);
 
 module.exports = router;

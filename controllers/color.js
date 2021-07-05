@@ -73,12 +73,9 @@ const deleteColor = async(req, res = response) => {
     const { id } = req.params;
 
     const color = await Color.findByIdAndDelete(id);
-    const userAuth = req.user;
-    //
 
     res.json({
-        color,
-        userAuth
+        color
     });
 }
 

@@ -6,7 +6,7 @@ const colorValid = () => {
 
 }
 
-
+//Validar el uid antes de registrar
 const exitUid = async(uid) => {
 
     //Validar si uid existe
@@ -17,6 +17,7 @@ const exitUid = async(uid) => {
     }
 }
 
+//Validar el _id de mongo
 const existIdMongo = async(id) => {
 
     //Validar si id existe
